@@ -1,4 +1,6 @@
 RateMyGame::Application.routes.draw do
+  root to: "games#index"
+  
   resources :publishers
 
   resources :games
