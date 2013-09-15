@@ -15,6 +15,7 @@ class RatingsController < ApplicationController
   # GET /ratings/new
   def new
     @rating = Rating.new
+    @games = Game.all
   end
 
   # GET /ratings/1/edit

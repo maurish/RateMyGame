@@ -14,10 +14,10 @@
   <tbody>
     <% @ratings.each do |rating| %>
       <tr>
-        <td><%= rating.game_id %></td>
+        <td><%= rating.game.name %></td>
         <td><%= rating.score %></td>
-        <td><%= link_to 'Show', rating %></td>
-        <td><%= link_to 'Edit', edit_rating_path(rating) %></td>
+        <td><%= button 'Show', rating %></td>
+        <td><%= button 'Edit', edit_rating_path(rating) %></td>
         <td><%= link_to 'Destroy', rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Rating', new_rating_path %>
+<%= button 'New Rating', new_rating_path, "btn btn-primary" %>

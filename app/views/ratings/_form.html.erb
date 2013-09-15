@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :game_id %><br>
-    <%= f.number_field :game_id %>
+    <%= f.label :game_id %>
+    <%= f.select :game_id, options_from_collection_for_select(@games, :id, :name)%>
   </div>
   <div class="field">
-    <%= f.label :score %><br>
+    <%= f.label :score %>
     <%= f.number_field :score %>
   </div>
   <div class="actions">
