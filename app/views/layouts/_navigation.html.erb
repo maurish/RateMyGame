@@ -7,13 +7,13 @@
           <a class="brand" href="#">Rate My Game</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
+               <%= nav_link "Publishers", publishers_path%>
               <%= nav_link "Games",games_path%>
-              <%= nav_link "Publishers", publishers_path%>
             </ul>
             <form class="navbar-form pull-right">
               <input class="span2" type="text" placeholder="Username">
               <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
+              <button type="submit" class="btn disabled">Sign in</button>
             </form>
           </div><!--/.nav-collapse -->
         
