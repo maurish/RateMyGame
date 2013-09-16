@@ -30,7 +30,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # SASS for bootstrap
-gem 'bootstrap-sass'
+gem 'bootstrap-sass-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
