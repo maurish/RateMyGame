@@ -32,6 +32,9 @@ gem 'jquery-rails'
 # SASS for bootstrap
 gem 'bootstrap-sass-rails'
 
+# Heroku requires this
+gem 'rails_12factor', group: :production
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
