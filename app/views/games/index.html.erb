@@ -16,13 +16,13 @@
       <tr>
         <td><%= game.name %></td>
         <td><%= game.publisher.name %></td>
-        <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button 'Show', game %></td>
+        <td><%= button 'Edit', edit_game_path(game), :class=>"btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', game, :class=>"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 
-<%= button "New Game", new_game_path, "btn btn-primary" %>
+<%= button "New Game", new_game_path, :class=>"btn btn-primary" %>

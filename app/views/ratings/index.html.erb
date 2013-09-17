@@ -17,8 +17,8 @@
         <td><%= rating.game.name %></td>
         <td><%= rating.score %></td>
         <td><%= button 'Show', rating %></td>
-        <td><%= button 'Edit', edit_rating_path(rating) %></td>
-        <td><%= link_to 'Destroy', rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button 'Edit', edit_rating_path(rating) , :class =>"btn btn-warning"%></td>
+        <td><%= button 'Destroy', rating,:class =>"btn btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= button 'New Rating', new_rating_path, "btn btn-primary" %>
+<%= button 'New Rating', new_rating_path, :class =>"btn btn-primary" %>
