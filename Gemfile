@@ -30,7 +30,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # SASS for bootstrap
-gem 'bootstrap-sass-rails'
+gem 'bootstrap-sass-rails', '>= 3.0.0.2'
 
 # Heroku requires this
 gem 'rails_12factor', group: :production
