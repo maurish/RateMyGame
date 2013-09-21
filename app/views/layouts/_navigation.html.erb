@@ -9,9 +9,10 @@
 
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-               <%= nav_link "Publishers", publishers_path%>
-              <%= nav_link "Games",games_path%>
-              <%= nav_link "Ratings", ratings_path%>
+              <%= nav_link "Publishers", publishers_path  %>
+              <%= nav_link "Games",      games_path       %>
+              <%= nav_link "Ratings",    ratings_path     %>
+              <%= nav_link "Users",      users_path       %>
             </ul>
             <%= form_for @user, url: {controller: :sessions, action: :create}, html:{:class => "navbar-form navbar-right"} do |f| %>
               <div class="form-group">
