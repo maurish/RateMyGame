@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :logged_in?, :currently_logged_as?
 
+  before_action :set_user
+
   def currently_logged_as? user
   	user == current_user
   end
@@ -16,5 +18,11 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
   	not current_user.nil?
+  end
+
+  private 
+  def set_user
+  	@user = User.new if @user.nil?
+  	@user.name = "pauli"
   end
 end
