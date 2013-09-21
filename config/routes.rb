@@ -1,4 +1,6 @@
 RateMyGame::Application.routes.draw do
+  resources :users
+
   resources :ratings
 
   root to: "games#index"
