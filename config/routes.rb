@@ -1,6 +1,6 @@
 RateMyGame::Application.routes.draw do
-
-  resources :sessions, only:[:create, :destroy]
+  get "sessions/destroy" 
+  resources :sessions, only:[:create]
 
   resources :users
 
