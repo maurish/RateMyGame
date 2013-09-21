@@ -23,6 +23,5 @@ class ApplicationController < ActionController::Base
   private 
   def set_user
   	@user = User.new if @user.nil?
-  	@user.name = "pauli"
   end
 end
