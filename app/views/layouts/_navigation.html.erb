@@ -13,14 +13,15 @@
               <%= nav_link "Games",games_path%>
               <%= nav_link "Ratings", ratings_path%>
             </ul>
-            <form class="navbar-form navbar-right">
+            <%= form_for @user, url: {controller: :sessions, action: :create}, html:{:class => "navbar-form navbar-right"} do |f| %>
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="Username">
+                <%= f.text_field :name, :class =>"form-control", placeholder:"Username"%>
               </div>
               <div class="form-group">
-                <input class="form-control" type="password" placeholder="Password">
+                <%= f.password_field :password, :class => "form-control", placeholder:"Password" %>
               </div>
-              <button type="submit" class="btn btn-success disabled">Sign in</button>
-            </form>
+              <%= f.submit "Sign in", :class=> "btn btn-success" %>
+            
+            <% end %><!-- /form -->
           </div><!--/.nav-collapse -->
         
