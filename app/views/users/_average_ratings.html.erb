@@ -1,0 +1,7 @@
+<p>
+	<% if ratings.empty? %>
+		You haven't made any ratings yet. <%= link_to 'Go make one', new_rating_path%>.
+	<% else %>
+		You have made total <%= pluralize  ratings.count, 'rating' %>. With average of <%= average ratings , :score%> 
+	<% end %>
+</p>

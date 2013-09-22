@@ -1,0 +1,7 @@
+<p>
+	<% if ratings.empty? %>
+		This game has not been yet rated.
+	<% else %>
+		The average rating of this game is <%= average ratings, :score %>/10.0 , with <%= pluralize ratings.size ,'rating'%> given
+	<% end %>
+</p>

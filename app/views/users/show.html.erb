@@ -1,6 +1,6 @@
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+
+  <h2><%= @user.name %></h2>
+
+<%= render 'users/average_ratings' , ratings: @user.ratings%>
 
 <%= link_to 'Edit', edit_user_path(@user) , :class=>"edit"%> 
