@@ -5,9 +5,7 @@ body {
 }
 
 table{
-	@extend .table;
-	@extend .table-striped;
-	@extend .table-hover;
+	@extend .table, .table-striped, .table-hover;
 	tbody tr a{
 		&.edit{
 			@extend .label-warning, .label;
@@ -26,6 +24,13 @@ button, input[type=submit] {
 	&.sign_in {
 		@extend .btn-success;
 	}
+	&.register {
+		@extend .btn-primary;
+	}
+}
+
+a.edit{
+	@extend .btn, .btn-warning;
 }
 
 
@@ -55,10 +60,9 @@ form {
 
 	.field {
 		@extend .form-group;
-	}
-
-	.field input {
-		@extend .form-control;
+		input, select {
+			@extend .form-control;
+		}
 	}
 
 	.actions {
