@@ -4,8 +4,8 @@
   <thead>
     <tr>
       <th>Game</th>
+      <th>User</th>
       <th>Score</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -14,7 +14,8 @@
   <tbody>
     <% @ratings.each do |rating| %>
       <tr>
-        <td><%= rating.game %></td>
+        <td><%= link_to rating.game.name, rating.game %></td>
+        <td><%= link_to rating.user, rating.user %></td>
         <td><%= rating.score %></td>
         <td><%= link_to 'Edit', edit_rating_path(rating) , :class =>"edit"%></td>
         <td><%= link_to 'Destroy', rating,:class =>"destroy",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
