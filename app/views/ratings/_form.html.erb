@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= f.label :score %>
-    <%= f.number_field :score %>
+    <%= f.range_field :score , :in => 0..10, :step => '1', data:{toggle:"tooltip", placement:"top"} %>
+    <output for="rating[score]" class="badge info" />
   </div>
   <div class="actions">
     <%= f.submit %>

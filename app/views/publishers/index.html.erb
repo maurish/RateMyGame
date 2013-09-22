@@ -4,7 +4,9 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Year</th>
+      <th>Founded</th>
+      <th>Country</th>
+      <th>City</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +16,10 @@
   <tbody>
     <% @publishers.each do |publisher| %>
       <tr>
-        <td><%= publisher.name %></td>
+        <td><%= link_to publisher.name, publisher %></td>
         <td><%= publisher.year %></td>
-        <td><%= button 'Show', publisher %></td>
+        <td><%= publisher.country %></td>
+        <td><%= publisher.city %></td>
         <td><%= link_to 'Edit', edit_publisher_path(publisher) , :class=>"edit"%></td>
         <td><%= link_to 'Destroy', publisher,:class=>"destroy", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
