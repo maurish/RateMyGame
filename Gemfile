@@ -32,6 +32,9 @@ gem 'jquery-rails'
 # SASS for bootstrap
 gem 'bootstrap-sass-rails', '>= 3.0.0.2'
 
+# For jquery to play nicely with turbolinks
+gem 'jquery-turbolinks'
+
 # Heroku requires this
 gem 'rails_12factor', group: :production
 
