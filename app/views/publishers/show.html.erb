@@ -7,5 +7,15 @@
   <strong>Year:</strong>
   <%= @publisher.year %>
 </p>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Published games:</h3>
+	</div>
+	<ul class="list-group">
+		<% @publisher.games.each do |game| %>
+			<li class="list-group-item"><%= link_to game , game%></li>
+		<% end %>
+	</ul>
+</div>
 
 <%= link_to 'Edit', edit_publisher_path(@publisher), :class=> "edit" %> 
