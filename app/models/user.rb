@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   					uniqueness: true
   has_secure_password
   validates :password, 	format:{with: /\w*/, message:"Must be contained of letters and numbers"},
-  						length:{:in => 6..36}
+  						length:{:in => 4..36}
 
   def to_s
   	"#{name}"
