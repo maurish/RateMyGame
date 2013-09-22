@@ -10,7 +10,7 @@
   <%= @game.publisher %>
 </p>
 
-<p> The average rating of this game is <%=@game.average_rating %> of 10, total of <%= @game.ratings.size %> ratings given</p>
+<p> The average rating of this game is <%= average @game.ratings, :score %> of 10, total of <%= @game.ratings.size %> ratings given</p>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
