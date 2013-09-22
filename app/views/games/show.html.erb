@@ -1,16 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @game.name %>
-</p>
+<h2>  <%= @game.name %></h2>
 
 <p>
   <strong>Publisher:</strong>
   <%= @game.publisher %>
 </p>
+<p>
+  <strong>Published:</strong>
+  <%= @game.year %>
+</p>
 
-<p> The average rating of this game is <%= average @game.ratings, :score %> of 10, total of <%= @game.ratings.size %> ratings given</p>
+<%= render 'games/average_ratings', ratings:@game.ratings %>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<%= link_to 'Edit', edit_game_path(@game) ,:class=>"edit"%> 

@@ -1,8 +1,7 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Game:</strong>
-  <%= @rating.game_id %>
+  <%= @rating.game %>
 </p>
 
 <p>
@@ -10,5 +9,4 @@
   <%= @rating.score %>
 </p>
 
-<%= link_to 'Edit', edit_rating_path(@rating) %> |
-<%= link_to 'Back', ratings_path %>
+<%= link_to 'Edit', edit_rating_path(@rating) , :class=> "edit"%> 
