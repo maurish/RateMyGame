@@ -3,7 +3,8 @@ class Rating < ActiveRecord::Base
 	belongs_to :user
 
 	validates :score, numericality:{:in => 1..10}, format:{with:/\A\d*(\.\d)?\z/, message:"Must be a number with max 1 digit"} 
-
+	validates :game, uniqueness: {scope: :user, messages:"You cannot rate same game twice"}
+	
 	def to_s
 		"#{game}: #{score}"
 	end
