@@ -22,6 +22,6 @@ class ApplicationController < ActionController::Base
 
   private 
   def set_session
-  	@session = User.new 
+  	@session = current_user || User.new
   end
 end
