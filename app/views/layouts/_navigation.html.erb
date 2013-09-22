@@ -14,8 +14,10 @@
       <ul class="nav navbar-nav">
         <%= nav_link "Publishers", publishers_path  %>
         <%= nav_link "Games",      games_path       %>
-        <%= nav_link "Ratings",    ratings_path     %>
-        <%= nav_link "Users",      users_path       %>
+        <% if signed_in? %>
+          <%= nav_link "Ratings",    ratings_path     %>
+          <%= nav_link "Users",      users_path       %>
+        <% end %>
       </ul>
 
       <% if not signed_in? %>
@@ -26,9 +28,10 @@
           <div class="form-group">
             <%= f.password_field :password, placeholder:"Password" %>
           </div>
-          <%= f.submit "Sign in", :class=> "sign_in" %>
+          <%= f.submit "Log in", :class=> "sign_in"  %>
         
         <% end %><!-- /form -->
+        <%= button "Register", new_user_path, :class=>"register navbar-btn navbar-right"%>
       <% else %> <!-- if signed-->
         <div class="nav navbar-nav navbar-right">
           <%#= content_tag :button, "Logout" , :class => "btn btn-default navbar-btn" , type:"button" %>
