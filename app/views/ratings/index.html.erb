@@ -14,9 +14,8 @@
   <tbody>
     <% @ratings.each do |rating| %>
       <tr>
-        <td><%= rating.game.name %></td>
+        <td><%= rating.game %></td>
         <td><%= rating.score %></td>
-        <td><%= button 'Show', rating %></td>
         <td><%= link_to 'Edit', edit_rating_path(rating) , :class =>"edit"%></td>
         <td><%= link_to 'Destroy', rating,:class =>"destroy",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

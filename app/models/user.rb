@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :ratings
+  has_many :ratings, dependent: :destroy
   has_many :games, through: :ratings
+
   validates :name, 	presence: true, 
   					uniqueness: true
   has_secure_password

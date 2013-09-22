@@ -22,6 +22,7 @@ class GamesController < ApplicationController
 
   # GET /games/1/edit
   def edit
+    @publishers =Publisher.all
   end
 
   # POST /games

@@ -20,6 +20,7 @@ class RatingsController < ApplicationController
 
   # GET /ratings/1/edit
   def edit
+    @games = Game.all
   end
 
   # POST /ratings
