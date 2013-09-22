@@ -3,3 +3,69 @@ body {
 	padding-top: 60px; 
 	padding-bottom: 25px;
 }
+
+table{
+	@extend .table;
+	@extend .table-striped;
+	@extend .table-hover;
+	tbody tr a{
+		&.edit{
+			@extend .label-warning, .label;
+		}
+		&.destroy{
+			@extend .label, .label-danger;
+		}
+	}
+}
+
+button, input[type=submit] {
+	@extend .btn;
+	&.new {
+		@extend .btn, .btn-primary;
+	}
+	&.sign_in {
+		@extend .btn-success;
+	}
+}
+
+
+form {
+	input {
+		&[type=text], &[type=password]{
+			@extend .form-control;
+		}
+	}
+	#error_explanation {
+		h2 {
+			@extend .alert;
+			@extend .alert-danger;
+		}
+		
+		ul {
+			list-style: none;
+	    	margin: 0 0 18px 0;
+	    	@extend .alert;
+	    	@extend .alert-danger;
+		}
+	}
+
+	.field_with_errors {
+		@extend .has-error;
+	}
+
+	.field {
+		@extend .form-group;
+	}
+
+	.field input {
+		@extend .form-control;
+	}
+
+	.actions {
+		@extend .form-actions;
+		input {
+			@extend .btn;
+			@extend .btn-primary;
+		}
+	}
+}
