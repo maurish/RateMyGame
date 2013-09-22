@@ -1,6 +1,5 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate, only:[:destroy, :new]
   
 
   # GET /games
@@ -74,12 +73,5 @@ class GamesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
       params.require(:game).permit(:name, :publisher_id)
-    end
-
-    def authenticate
-      accounts = {"admin" =>"password"}
-      authenticate_or_request_with_http_basic do |username, password|
-       accounts[username]==password
-     end
     end
 end
